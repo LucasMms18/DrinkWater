@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class CustomDrawer extends StatefulWidget {
   const CustomDrawer({Key? key}) : super(key: key);
@@ -39,10 +40,30 @@ class _CustomDrawerState extends State<CustomDrawer> {
             endIndent: 35,
             indent: 35,
           ),
+          Text(
+            "Nível 2",
+            style: TextStyle(fontSize: 15),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          CircularProgressIndicator(
+            color: Colors.white,
+            value: 50,
+            strokeWidth: 10,
+          ),
           ListTile(
             title: Text('Resumo Diário'),
-            trailing: Icon(Icons.add),
-          )
+            trailing: Icon(MdiIcons.clipboard),
+          ),
+          ListTile(
+            title: Text('Conquistas'),
+            trailing: Icon(MdiIcons.trophy),
+          ),
+          ListTile(
+            title: Text(''),
+            trailing: Icon(MdiIcons.clipboard),
+          ),
         ],
       ),
     );
